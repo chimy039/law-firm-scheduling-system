@@ -1,0 +1,151 @@
+*{box-sizing:border-box;}
+
+body{
+  font-family:Arial,sans-serif;
+  margin:0;
+  padding:24px;
+  background:#f7f7f7;
+  color:#222;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.small{font-size:13px;color:#666;}
+
+.btn{
+  display:inline-block;
+  padding:9px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.btn-dark{background:#111;color:#fff;}
+.btn-light{background:#e9e9e9;color:#111;}
+.btn-red{background:#c62828;color:#fff;}
+
+.pill{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:12px;
+  background:#eee;
+}
+
+.pill.confirmed{background:#d4f4dd;color:#1a7f3a;}
+.pill.cancelled{background:#ffe1e1;color:#a70000;}
+
+.meeting-card{
+  border:1px solid #e5e5e5;
+  border-radius:14px;
+  padding:18px;
+  margin-bottom:16px;
+  background:white;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  transition:transform .08s ease,box-shadow .08s ease;
+}
+
+.meeting-card:hover{
+  transform:translateY(-1px);
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.meeting-header{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+
+.meeting-title{
+  font-size:18px;
+  font-weight:600;
+}
+
+.meeting-meta{
+  font-size:14px;
+  color:#555;
+  margin-bottom:6px;
+}
+
+.actions{
+  display:flex;
+  gap:8px;
+  margin-top:12px;
+  flex-wrap:wrap;
+}
+
+label{display:block;margin-top:10px;font-weight:600;}
+
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+  border:1px solid #ccc;
+  border-radius:10px;
+}
+
+textarea{min-height:90px;}
+
+.card{
+  background:white;
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:18px;
+}
+
+.msg{
+  margin:12px 0;
+  padding:10px;
+  border-radius:10px;
+  background:#f2f2f2;
+}
+
+@media(max-width:700px){
+  body{padding:14px;}
+}
+
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  z-index:999;
+}
+
+.modal-box{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:min(520px, 92vw);
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:14px;
+  padding:16px;
+  z-index:1000;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-title{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.modal-body{
+  color:#444;
+  line-height:1.35;
+}
+
+.pill.pending{background:#fff2cc;color:#8a6d00;}
